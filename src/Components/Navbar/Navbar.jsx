@@ -9,7 +9,7 @@ const Navbar = () => {
 
     </>
     return (
-        <div className="navbar bg-[#0e5d6b] mt-4 bg-opacity-100 sticky top-2 z-40">
+        <div className="navbar bg-[#1D5B79] mt-4 bg-opacity-100 sticky top-2 z-40">
             <div className="navbar-start ">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -20,7 +20,7 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div>
-                    <a className="btn btn-ghost normal-case lg:text-3xl bg-[#eede04]">World Language</a>
+                    <a className="btn btn-ghost normal-case lg:text-3xl bg-[#F3AA60]">World Language</a>
                 </div>
             </div>
             <div className="navbar-center hidden lg:flex">
@@ -29,7 +29,7 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <input type="text" placeholder="Search" className="input input-bordered w-24 md:w-auto br border-2 border-[#eede04] hover:border-double hover:border-4 hover:border-[#eede04]" />
+                <input type="text" placeholder="Search" className="input input-bordered w-24 md:w-auto br border-2 border-[#F3AA60] hover:border-double hover:border-4 hover:border-[#F3AA60]" />
                 <div className="w-10 h-10 rounded-2xl border ml-2">
                     {/* <img src="../../assets/user.png" /> */}
                     <BiUserCircle className="font-extrabold text-4xl text-center"></BiUserCircle>
