@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { BiUserCircle } from "react-icons/bi";
+import { FaLanguage } from 'react-icons/fa';
 const Navbar = () => {
     const navOptions = <>
         <Link><li><a>Home</a></li></Link>
@@ -20,7 +21,7 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div>
-                    <a className="btn btn-ghost normal-case lg:text-3xl bg-[#ffffff]">World Language</a>
+                    <a className="btn btn-ghost normal-case lg:text-3xl bg-[#ffffff]"> <FaLanguage className="lg:text-4xl"></FaLanguage> World Language </a>
                 </div>
             </div>
             <div className="navbar-center hidden lg:flex">
