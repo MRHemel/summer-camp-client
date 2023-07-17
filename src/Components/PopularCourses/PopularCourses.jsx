@@ -23,11 +23,11 @@ const PopularCourses = () => {
                 modules={[FreeMode, Pagination]}
                 className="mySwiper"
             >
-                <SwiperSlide><img src={class1} alt="" /><p className='text-center text-2xl font-extrabold bg-slate-500 text-white relative bottom-16 border-t-2 p-4'>Learn English</p></SwiperSlide>
-                <SwiperSlide><img src={class2} alt="" /><p className='text-center text-2xl font-extrabold bg-slate-500 text-white relative bottom-16 border-t-2 p-4'>Learn chinese</p></SwiperSlide>
-                <SwiperSlide><img src={class3} alt="" /><p className='text-center text-2xl font-extrabold bg-slate-500 text-white relative bottom-16 border-t-2 p-4'>Learn Bangla</p></SwiperSlide>
-                <SwiperSlide><img src={class4} alt="" /><p className='text-center text-2xl font-extrabold bg-slate-500 text-white relative bottom-16 border-t-2 p-4'>Learn Italiano</p></SwiperSlide>
-                <SwiperSlide><img src={class5} alt="" /><p className='text-center text-2xl font-extrabold bg-slate-500 text-white relative bottom-16 border-t-2 p-4'>Learn Korean</p></SwiperSlide>
+                <SwiperSlide><img src={class1} alt="" /><p className='text-center text-2xl font-extrabold bg-[#A5D7E8] text-black relative bottom-16 border-t-2 p-4'>Learn English</p></SwiperSlide>
+                <SwiperSlide><img src={class2} alt="" /><p className='text-center text-2xl font-extrabold bg-[#A5D7E8] text-black relative bottom-16 border-t-2 p-4'>Learn chinese</p></SwiperSlide>
+                <SwiperSlide><img src={class3} alt="" /><p className='text-center text-2xl font-extrabold bg-[#A5D7E8] text-black relative bottom-16 border-t-2 p-4'>Learn Bangla</p></SwiperSlide>
+                <SwiperSlide><img src={class4} alt="" /><p className='text-center text-2xl font-extrabold bg-[#A5D7E8] text-black relative bottom-16 border-t-2 p-4'>Learn Italiano</p></SwiperSlide>
+                <SwiperSlide><img src={class5} alt="" /><p className='text-center text-2xl font-extrabold bg-[#A5D7E8] text-black relative bottom-16 border-t-2 p-4'>Learn Korean</p></SwiperSlide>
             </Swiper>
         </div>
     );
