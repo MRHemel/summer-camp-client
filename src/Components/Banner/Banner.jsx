@@ -12,7 +12,7 @@ const Banner = () => {
                 <h1 className='uppercase text-center text-5xl font-extrabold text-white mt-40'>Get your admission today</h1>
 
                 <div className='lg:flex lg:justify-evenly mt-20 mb-16'>
-                    <div className='flex bg-[#9681EB] p-4 mt-16 hover:bg-[#F3AA60]'>
+                    <div className='flex bg-[#19376D] p-4 mt-16 hover:bg-[#576CBC]'>
                         <BiWorld className='text-5xl'></BiWorld>
                         <div>
                             <h2 className='text-4xl text-white'>Online Courses</h2>

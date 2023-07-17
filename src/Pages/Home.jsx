@@ -2,6 +2,7 @@
 import Slider from '../Components/Slider/Slider';
 import Banner from '../Components/Banner/Banner';
 import PopularInstructor from '../Components/PopularInstructor/PopularInstructor';
+import PopularCourses from '../Components/PopularCourses/PopularCourses';
 
 
 
@@ -17,7 +18,8 @@ const Home = () => {
                 <PopularInstructor></PopularInstructor>
             </div>
             <div className='mt-20'>
-                <h1 className='text-center lg:text-5xl font-bold mb-20 border-y-8 p-8'>Popular Classes</h1>
+                <h1 className='text-center lg:text-5xl font-bold mb-20 border-y-8 p-8'>Popular Courses</h1>
+                <PopularCourses></PopularCourses>
 
             </div>
         </div>

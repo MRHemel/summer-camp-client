@@ -10,7 +10,7 @@ const Navbar = () => {
 
     </>
     return (
-        <div className="navbar bg-[#6527BE] mt-4 bg-opacity-100 sticky top-2 z-40">
+        <div className="navbar bg-[#0B2447] mt-4 bg-opacity-100 sticky top-2 z-40">
             <div className="navbar-start ">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -33,7 +33,7 @@ const Navbar = () => {
                 <input type="text" placeholder="Search" className="input input-bordered w-24 md:w-auto br border-2 border-[#F3AA60] hover:border-double hover:border-4 hover:border-[#F3AA60]" />
                 <div className="w-10 h-10 rounded-2xl border ml-2">
                     {/* <img src="../../assets/user.png" /> */}
-                    <BiUserCircle className="font-extrabold text-4xl text-center"></BiUserCircle>
+                    <BiUserCircle className="font-extrabold text-white text-4xl text-center"></BiUserCircle>
                 </div>
 
             </div>
