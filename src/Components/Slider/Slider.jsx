@@ -9,7 +9,7 @@ import photo2 from '../../assets/slider/istockphoto-1286519342-1024x1024.jpg'
 import photo4 from '../../assets/slider/istockphoto-1369596152-1024x1024.jpg'
 const Slider = () => {
     return (
-        <>
+        <div>
             <Swiper
                 spaceBetween={30}
                 centeredSlides={true}
@@ -29,7 +29,7 @@ const Slider = () => {
                 <SwiperSlide><img src={photo1} className='w-full h-2/4' alt="" /></SwiperSlide>
                 <SwiperSlide><img src={photo4} className='w-full h-2/4' alt="" /></SwiperSlide>
             </Swiper>
-        </>
+        </div>
     );
 };
 

@@ -34,7 +34,7 @@ const Navbar = () => {
                 <div className="">
                     {/* <img src="../../assets/user.png" /> */}
                     {/* <BiUserCircle className="font-extrabold text-white text-4xl text-center"></BiUserCircle> */}
-                    <button className="btn btn-outline btn-[#576CBC] text-white p-4 ml-2 hover:bg-[#576CBC]">Login</button>
+                    <Link to={'/login'}><button className="btn btn-outline btn-[#576CBC] text-white p-4 ml-2 hover:bg-[#576CBC]">Login</button></Link>
                 </div>
 
             </div>

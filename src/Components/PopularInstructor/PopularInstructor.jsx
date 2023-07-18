@@ -4,6 +4,8 @@ import 'swiper/css/free-mode';
 import 'swiper/css/pagination';
 import { FreeMode, Pagination, Autoplay } from 'swiper/modules';
 
+
+
 import instructor1 from '../../assets/instructor/instructor1.jpg'
 import instructor2 from '../../assets/instructor/instructor2.jpg'
 import instructor3 from '../../assets/instructor/instructor3.jpg'
@@ -21,10 +23,10 @@ const PopularInstructor = () => {
                 slidesPerView={3}
                 spaceBetween={30}
                 freeMode={true}
-                autoplay={{
-                    delay: 1000,
-                    disableOnInteraction: false,
-                }}
+                // autoplay={{
+                //     delay: 1000,
+                //     disableOnInteraction: false,
+                // }}
                 pagination={{
                     clickable: true,
                 }}
