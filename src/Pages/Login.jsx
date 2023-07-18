@@ -30,7 +30,7 @@ const Login = () => {
                             <button className="btn btn-primary">Login</button>
                         </div>
                     </div>
-                    <p className='text-lg'>Don't have an account? <Link className='text-rose-200 font-extrabold underline hover:text-orange-300'>Sign Up</Link> </p>
+                    <p className='text-lg'>Don't have an account? <Link to={'/signup'} className='text-rose-200 font-extrabold underline hover:text-orange-300'>Sign Up</Link> </p>
                 </div>
             </div>
         </div>
