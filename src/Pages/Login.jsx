@@ -10,7 +10,7 @@ const Login = () => {
 
                 </div>
                 <div className="card p-8 flex-shrink-0 w-full max-w-sm shadow-2xl ">
-                    <div className="card-body">
+                    <form className="card-body">
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text text-2xl">Email</span>
@@ -29,7 +29,7 @@ const Login = () => {
                         <div className="form-control mt-6">
                             <button className="btn btn-primary">Login</button>
                         </div>
-                    </div>
+                    </form>
                     <p className='text-lg'>Don't have an account? <Link to={'/signup'} className='text-rose-200 font-extrabold underline hover:text-orange-300'>Sign Up</Link> </p>
                 </div>
             </div>
