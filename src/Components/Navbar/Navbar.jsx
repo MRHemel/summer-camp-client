@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { BiUserCircle } from "react-icons/bi";
+
 import { FaLanguage } from 'react-icons/fa';
 const Navbar = () => {
     const navOptions = <>
@@ -31,9 +31,10 @@ const Navbar = () => {
             </div>
             <div className="navbar-end">
                 <input type="text" placeholder="Search" className="input input-bordered w-24 md:w-auto br border-2 border-[#F3AA60] hover:border-double hover:border-4 hover:border-[#F3AA60]" />
-                <div className="w-10 h-10 rounded-2xl border ml-2">
+                <div className="">
                     {/* <img src="../../assets/user.png" /> */}
-                    <BiUserCircle className="font-extrabold text-white text-4xl text-center"></BiUserCircle>
+                    {/* <BiUserCircle className="font-extrabold text-white text-4xl text-center"></BiUserCircle> */}
+                    <button className="btn btn-outline btn-[#576CBC] text-white p-4 ml-2 hover:bg-[#576CBC]">Login</button>
                 </div>
 
             </div>

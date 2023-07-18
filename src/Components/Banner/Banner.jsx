@@ -9,7 +9,7 @@ const Banner = () => {
         <div className='mb-20'>
             <Parallax blur={5} bgImage={cover} bgImageAlt="" strength={600}>
 
-                <h1 className='uppercase text-center text-5xl font-extrabold text-white mt-40'>Get your admission today</h1>
+                <h1 className='uppercase text-center text-5xl font-extrabold text-white mt-28'>Get your admission today</h1>
 
                 <div className='lg:flex lg:justify-evenly mt-20 mb-16'>
                     <div className='flex bg-[#19376D] p-4 mt-16 hover:bg-[#576CBC]'>
@@ -36,7 +36,7 @@ const Banner = () => {
                         </div>
                     </div>
                 </div>
-                <h1 className='uppercase text-center text-5xl font-extrabold text-[#f6e5e5] mt-40'>We are offering you all language</h1>
+                <h1 className='uppercase text-center text-5xl font-extrabold text-[#f6e5e5] mt-28'>We are offering you all language</h1>
                 <p className='text-center text-white text-2xl mt-4 mb-20'>You choose yours</p>
             </Parallax>
         </div>
