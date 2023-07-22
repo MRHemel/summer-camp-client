@@ -9,6 +9,7 @@ import class2 from '../../assets/classes/class2.jpg'
 import class3 from '../../assets/classes/class3.jpg'
 import class4 from '../../assets/classes/class4.jpg'
 import class5 from '../../assets/classes/class5.jpg'
+import class6 from '../../assets/classes/class6.png'
 
 const PopularCourses = () => {
     return (
@@ -28,6 +29,7 @@ const PopularCourses = () => {
                 <SwiperSlide><img src={class3} alt="" /><p className='text-center text-2xl font-extrabold bg-[#A5D7E8] text-black relative bottom-16 border-t-2 p-4'>Learn Bangla</p></SwiperSlide>
                 <SwiperSlide><img src={class4} alt="" /><p className='text-center text-2xl font-extrabold bg-[#A5D7E8] text-black relative bottom-16 border-t-2 p-4'>Learn Italiano</p></SwiperSlide>
                 <SwiperSlide><img src={class5} alt="" /><p className='text-center text-2xl font-extrabold bg-[#A5D7E8] text-black relative bottom-16 border-t-2 p-4'>Learn Korean</p></SwiperSlide>
+                <SwiperSlide><img src={class6} alt="" /><p className='text-center text-2xl font-extrabold bg-[#A5D7E8] text-black relative bottom-16 border-t-2 p-4'>Learn Arabic</p></SwiperSlide>
             </Swiper>
         </div>
     );

@@ -12,9 +12,7 @@ import instructor3 from '../../assets/instructor/instructor3.jpg'
 import instructor4 from '../../assets/instructor/instructor4.jpg'
 import instructor5 from '../../assets/instructor/instructor5.jpg'
 import instructor6 from '../../assets/instructor/instructor6.jpg'
-import instructor7 from '../../assets/instructor/instructor7.jpg'
-import instructor8 from '../../assets/instructor/instructor8.jpg'
-import instructor9 from '../../assets/instructor/instructor9.jpg'
+
 
 const PopularInstructor = () => {
     return (
@@ -39,9 +37,7 @@ const PopularInstructor = () => {
                 <SwiperSlide><img src={instructor4} alt="" /></SwiperSlide>
                 <SwiperSlide><img src={instructor5} alt="" /></SwiperSlide>
                 <SwiperSlide><img src={instructor6} alt="" /></SwiperSlide>
-                <SwiperSlide><img src={instructor7} alt="" /></SwiperSlide>
-                <SwiperSlide><img src={instructor8} alt="" /></SwiperSlide>
-                <SwiperSlide><img src={instructor9} alt="" /></SwiperSlide>
+
 
             </Swiper>
         </div>

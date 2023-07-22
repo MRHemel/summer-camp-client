@@ -1,8 +1,12 @@
 import { useForm } from "react-hook-form"
 
 import bg from '../assets/login/background.png'
+import { useContext } from "react";
+import { AuthContext } from "../providers/AuthProviders";
 
 const SignUp = () => {
+
+    const { createuser } = useContext(AuthContext)
     const {
         register,
         handleSubmit,
@@ -10,10 +14,16 @@ const SignUp = () => {
         watch,
     } = useForm()
 
-    const password = watch("password");
+    const pass = watch("password");
 
     const onSubmit = (data) => {
-        console.log(data)
+        // console.log(data)
+        createuser(data.email, data.password)
+            .then(result => {
+                const loggeduser = result.user;
+                console.log(loggeduser)
+            })
+
 
     }
 
@@ -64,7 +74,7 @@ const SignUp = () => {
                             <label className="label">
                                 <span className="label-text text-2xl">Confirm Password</span>
                             </label>
-                            <input type="text" {...register("confirmPassword", { required: true, validate: (value) => value === password || 'password does not match' })} placeholder="password" className="input input-bordered" />
+                            <input type="text" {...register("confirmPassword", { required: true, validate: (value) => value === pass || 'password does not match' })} placeholder="password" className="input input-bordered" />
                             {errors.confirmPassword && <span className="text-red-600">This field is required</span>}
                             {errors.confirmPassword?.type === 'validate' && (
                                 <span className="text-red-600">{errors.confirmPassword.message}</span>

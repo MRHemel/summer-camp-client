@@ -12,6 +12,11 @@ import ErrorPage from './Pages/ErrorPage';
 import Home from './Pages/Home';
 import Login from './Pages/Login';
 import SignUp from './Pages/SignUp';
+import Classes from './Pages/Classes';
+import Instructors from './Pages/Instructors';
+import AuthProviders from './providers/AuthProviders';
+import { HelmetProvider } from 'react-helmet-async';
+
 
 const router = createBrowserRouter([
   {
@@ -30,6 +35,15 @@ const router = createBrowserRouter([
       {
         path: '/signup',
         element: <SignUp></SignUp>
+      },
+      {
+        path: '/classes',
+        element: <Classes></Classes>
+      },
+      {
+        path: '/instructors',
+        element: <Instructors></Instructors>,
+        // loader: () => fetch('http://localhost:5000/instructors')
       }
     ],
   },
@@ -37,8 +51,12 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <div className='max-w-screen-xl		mx-auto'>
-      <RouterProvider router={router} />
-    </div>
+    <HelmetProvider>
+      <AuthProviders>
+        <div className='max-w-screen-xl		mx-auto'>
+          <RouterProvider router={router} />
+        </div>
+      </AuthProviders>
+    </HelmetProvider>
   </React.StrictMode>,
 )
