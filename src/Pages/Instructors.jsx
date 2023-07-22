@@ -24,7 +24,7 @@ const instructors = () => {
                     <h1 className='text-center lg:text-5xl font-bold mb-10 border-y-8 p-8'>Popular Instructors</h1>
                 </Fade>
             </div>
-            <div className="grid grid-cols-3 gap-4">
+            <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-4">
                 {instructors.map((instructor) => (
                     <InstructorCard key={instructor._id}
                         instructor={instructor}></InstructorCard>
