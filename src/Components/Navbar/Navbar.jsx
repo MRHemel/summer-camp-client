@@ -10,7 +10,9 @@ const Navbar = () => {
         <Link><li><a>Home</a></li></Link>
         <Link to={'/instructors'}><li><a>Instructor</a></li></Link>
         <Link to={'/classes'}><li><a>Classes</a></li></Link>
-        <Link><li><a>Dashboard</a></li></Link>
+        {
+            user && <Link to={'/dashboard'}><li><a>Dashboard</a></li></Link>
+        }
     </>
 
     const handleLogOut = () => {
@@ -31,7 +33,7 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div>
-                    <a className="btn btn-ghost normal-case lg:text-3xl bg-[#ffffff]"> <FaLanguage className="lg:text-4xl"></FaLanguage> World Language </a>
+                    <a className="btn btn-ghost normal-case lg:text-3xl text-white"> <FaLanguage className="lg:text-4xl"></FaLanguage> World Language </a>
                 </div>
             </div>
             <div className="navbar-center hidden lg:flex">

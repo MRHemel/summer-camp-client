@@ -16,6 +16,7 @@ import Classes from './Pages/Classes';
 import Instructors from './Pages/Instructors';
 import AuthProviders from './providers/AuthProviders';
 import { HelmetProvider } from 'react-helmet-async';
+import Dashboard from './Dashboard/Dashboard';
 
 
 const router = createBrowserRouter([
@@ -47,6 +48,10 @@ const router = createBrowserRouter([
       }
     ],
   },
+  {
+    path: '/dashboard',
+    element: <Dashboard></Dashboard>
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(

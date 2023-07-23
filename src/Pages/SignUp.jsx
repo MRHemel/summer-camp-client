@@ -30,7 +30,7 @@ const SignUp = () => {
 
     return (
         <div className="hero min-h-screen bg-base-200" style={{ backgroundImage: `url(${bg})` }}>
-            <div className="hero-content flex-col ">
+            <div className="hero-content flex-col w-full">
                 <div className="text-center lg:text-left">
                     <h1 className="text-5xl font-bold">Sign Up now!</h1>
 
@@ -79,8 +79,6 @@ const SignUp = () => {
                             {errors.confirmPassword?.type === 'validate' && (
                                 <span className="text-red-600">{errors.confirmPassword.message}</span>
                             )}
-
-
 
                         </div>
                         <div className="form-control">
