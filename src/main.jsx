@@ -17,6 +17,14 @@ import Instructors from './Pages/Instructors';
 import AuthProviders from './providers/AuthProviders';
 import { HelmetProvider } from 'react-helmet-async';
 import Dashboard from './Dashboard/Dashboard';
+import PrivateRoute from './PrivateRoute/PrivateRoute';
+import SelectedClass from './Dashboard/Students/SelectedClass';
+import EnrolledClass from './Dashboard/Students/EnrolledClass';
+import {
+  QueryClient,
+  QueryClientProvider,
+} from '@tanstack/react-query'
+const queryClient = new QueryClient()
 
 
 const router = createBrowserRouter([
@@ -50,7 +58,17 @@ const router = createBrowserRouter([
   },
   {
     path: '/dashboard',
-    element: <Dashboard></Dashboard>
+    element: <PrivateRoute> <Dashboard></Dashboard></PrivateRoute>,
+    children: [
+      {
+        path: '/dashboard/selectedClass',
+        element: <SelectedClass></SelectedClass>
+      },
+      {
+        path: '/dashboard/enrolledClass',
+        element: <EnrolledClass></EnrolledClass>
+      }
+    ]
   }
 ]);
 
@@ -58,9 +76,11 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <HelmetProvider>
       <AuthProviders>
-        <div className='max-w-screen-xl		mx-auto'>
-          <RouterProvider router={router} />
-        </div>
+        <QueryClientProvider client={queryClient}>
+          <div className='max-w-screen-xl		mx-auto'>
+            <RouterProvider router={router} />
+          </div>
+        </QueryClientProvider>
       </AuthProviders>
     </HelmetProvider>
   </React.StrictMode>,

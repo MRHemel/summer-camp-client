@@ -4,7 +4,7 @@ import { useLoaderData } from "react-router-dom";
 import ClassCard from "../Components/ClassCard";
 
 
-const classes = () => {
+const Classes = () => {
     const courses = useLoaderData()
     return (
         <div>
@@ -29,4 +29,4 @@ const classes = () => {
     );
 };
 
-export default classes;
+export default Classes;
