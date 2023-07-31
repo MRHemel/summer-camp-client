@@ -7,6 +7,8 @@ import { Helmet } from "react-helmet-async";
 const Dashboard = () => {
     const { user, logOut } = useContext(AuthContext)
 
+    const isAdmin = true;
+
 
     const handleLogOut = () => {
         logOut()
@@ -14,8 +16,14 @@ const Dashboard = () => {
             .catch(error => console.log(error))
     }
     const navOptions = <>
-        <Link to={'/dashboard/selectedClass'}><li><a className="hover:text-teal-500"> Selected classes</a></li></Link>
-        <Link to={'/dashboard/enrolledClass'}><li><a className="hover:text-teal-500"> Enrolled Classes</a></li></Link>
+        {
+            isAdmin ? <>
+                <Link to={'/dashboard/adminhome'}><li><a className="hover:text-teal-500"> Admin Home</a></li></Link>
+                <Link to={'/dashboard/allusers'}><li><a className="hover:text-teal-500"> Manage Users</a></li></Link>
+                <Link to={'/dashboard/allclasses'}><li><a className="hover:text-teal-500"> Manage Classes</a></li></Link>
+            </> : <><Link to={'/dashboard/selectedClass'}><li><a className="hover:text-teal-500"> Selected classes</a></li></Link>
+                <Link to={'/dashboard/enrolledClass'}><li><a className="hover:text-teal-500"> Enrolled Classes</a></li></Link></>
+        }
     </>
     return (
         <div>
@@ -49,7 +57,7 @@ const Dashboard = () => {
                     </div>
                     {/* Page content here */}
                     <div>
-                        <h1 className="text-4xl font-bold text-center ">welcome <span className="text-3xl bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-transparent bg-clip-text">{user && user.email}</span></h1>
+                        <h1 className="text-4xl font-bold text-center ">welcome <span className="text-3xl bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-transparent bg-clip-text">{user && user.displayName || user.email}</span></h1>
                     </div>
 
                     <Outlet></Outlet>

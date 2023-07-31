@@ -24,6 +24,9 @@ import {
   QueryClient,
   QueryClientProvider,
 } from '@tanstack/react-query'
+import AdminHome from './Dashboard/Admin/AdminHome';
+import AllUsers from './Dashboard/Admin/AllUsers';
+import AllClasses from './Dashboard/Admin/AllClasses';
 const queryClient = new QueryClient()
 
 
@@ -67,6 +70,18 @@ const router = createBrowserRouter([
       {
         path: '/dashboard/enrolledClass',
         element: <EnrolledClass></EnrolledClass>
+      },
+      {
+        path: '/dashboard/adminhome',
+        element: <AdminHome></AdminHome>
+      },
+      {
+        path: '/dashboard/allusers',
+        element: <AllUsers></AllUsers>
+      },
+      {
+        path: '/dashboard/allclasses',
+        element: <AllClasses></AllClasses>
       }
     ]
   }

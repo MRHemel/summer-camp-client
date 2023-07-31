@@ -4,8 +4,9 @@ import bg from '../assets/login/background.png'
 import { useContext, useState } from 'react';
 import { AuthContext } from '../providers/AuthProviders';
 import Swal from 'sweetalert2';
+import { FaGoogle } from 'react-icons/fa';
 const Login = () => {
-    const { login } = useContext(AuthContext)
+    const { login, googleSignIn } = useContext(AuthContext)
     const [error, setError] = useState('')
     const navigate = useNavigate()
     const from = location.state?.from?.pathname || '/'
@@ -35,6 +36,35 @@ const Login = () => {
                 setError(error)
             })
         form.reset()
+    }
+
+    const handleGoogle = () => {
+        googleSignIn()
+            .then(result => {
+                const loggedinUser = result.user;
+                console.log(loggedinUser)
+                const saveStudent = { name: loggedinUser.displayName, email: loggedinUser.email }
+                fetch('http://localhost:5000/users', {
+                    method: 'POST',
+                    headers: {
+                        'content-type': 'application/json'
+                    },
+                    body: JSON.stringify(saveStudent)
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        if (data.insertedId) {
+                            Swal.fire({
+                                position: 'top-end',
+                                icon: 'success',
+                                title: 'Login Successful',
+                                showConfirmButton: false,
+                                timer: 1500
+                            })
+                            navigate(from, { replace: true })
+                        }
+                    })
+            })
     }
 
 
@@ -70,7 +100,15 @@ const Login = () => {
                     </form>
                     <p className='text-red-600 font-bold '>{error.message}</p>
                     <p className='text-lg'>Don't have an account? <Link to={'/signup'} className='text-rose-200 font-extrabold underline hover:text-orange-300'>Sign Up</Link> </p>
+                    <div className="divider"></div>
+                    <div className='text-center space-y-4 my-0'>
+                        <h1 className='text-lg font-extrabold'>Login with</h1>
+                        <button onClick={handleGoogle} className='btn btn-circle btn-outline'>
+                            <FaGoogle className='text-3xl w-full '></FaGoogle>
+                        </button>
+                    </div>
                 </div>
+
             </div>
         </div>
     );

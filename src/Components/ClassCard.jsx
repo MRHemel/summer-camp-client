@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../providers/AuthProviders";
 import { useLocation, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
@@ -6,10 +6,11 @@ import Swal from "sweetalert2";
 const ClassCard = ({ course }) => {
     const { name, instructor, seats, price, image, _id } = course
     const { user } = useContext(AuthContext)
+    const [disabled, setDisabled] = useState(false)
     const navigate = useNavigate()
     const location = useLocation()
-    const handleSelect = (item) => {
-        console.log(item)
+    const handleSelect = () => {
+        // console.log(item)
         if (!user) {
             Swal.fire({
                 title: 'You are not logged in!!!!!',
@@ -46,6 +47,8 @@ const ClassCard = ({ course }) => {
                         })
                     }
                 })
+            setDisabled(true)
+
         }
     }
     return (
@@ -59,7 +62,7 @@ const ClassCard = ({ course }) => {
                 <p>Seats:{seats}</p>
                 <p>Price:${price}</p>
                 <div className="card-actions">
-                    <button disabled={seats === 0} className="btn btn-primary" onClick={() => handleSelect(course)}>Select</button>
+                    <button disabled={seats === 0 || disabled} className="btn btn-primary" onClick={() => handleSelect(course)}>Select</button>
                 </div>
             </div>
         </div>

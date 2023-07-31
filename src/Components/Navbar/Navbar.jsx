@@ -48,7 +48,9 @@ const Navbar = () => {
                         user ? <div className="dropdown dropdown-end">
                             <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                                 <div className="w-10 rounded-full">
-                                    <BiUserCircle className="font-extrabold text-white text-4xl text-center"></BiUserCircle>
+                                    {
+                                        user.photoURL ? <img src="https://lh3.googleusercontent.com/a/AAcHTtfTftC80Katdz_cCncDPdFhAhOF-HEMKlIPswohNNRU_VE=s96-c" alt="" /> : <BiUserCircle className="font-extrabold text-white text-4xl text-center"></BiUserCircle>
+                                    }
                                 </div>
                             </label>
                             <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">

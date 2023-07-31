@@ -14,6 +14,7 @@
     "@react-spring/web": "^9.7.3",
     "@tanstack/react-query": "^4.32.0",
     "animate.css": "^4.1.1",
+    "axios": "^1.4.0",
     "firebase": "^10.0.0",
     "keen-slider": "^6.8.6",
     "lottie-react": "^2.4.0",

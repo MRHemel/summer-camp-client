@@ -6,7 +6,7 @@ const SelectedClass = () => {
     const [cart, refetch] = useCart()
     // console.log(cart)
     const handleDelete = item => {
-        console.log(item)
+        // console.log(item)
         Swal.fire({
             title: 'Are you sure?',
             text: "You won't be able to revert this!",
@@ -22,13 +22,15 @@ const SelectedClass = () => {
                 })
                     .then(res => res.json())
                     .then(data => {
+                        console.log(data)
                         if (data.deletedCound > 0) {
-                            refetch();
+
                             Swal.fire(
                                 'Deleted!',
                                 'Your course has been deleted.',
                                 'success'
                             )
+                            refetch();
                         }
                     })
             }
