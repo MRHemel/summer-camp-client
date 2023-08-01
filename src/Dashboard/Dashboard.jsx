@@ -3,11 +3,13 @@ import { FaLanguage } from "react-icons/fa";
 import { Link, Outlet } from "react-router-dom";
 import { AuthContext } from "../providers/AuthProviders";
 import { Helmet } from "react-helmet-async";
+import useAdmin from "../hooks/useAdmin";
 
 const Dashboard = () => {
     const { user, logOut } = useContext(AuthContext)
 
-    const isAdmin = true;
+    // const isAdmin = true;
+    const [isAdmin] = useAdmin()
 
 
     const handleLogOut = () => {
