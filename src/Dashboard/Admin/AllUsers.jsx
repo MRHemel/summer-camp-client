@@ -23,7 +23,7 @@ const AllUsers = () => {
             confirmButtonText: 'Yes, Make Admin!'
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/users/admin/${user._id}`, {
+                fetch(`https://b712-summer-camp-server-side-chi.vercel.app/users/admin/${user._id}`, {
                     method: 'PATCH'
                 })
                     .then(res => res.json())

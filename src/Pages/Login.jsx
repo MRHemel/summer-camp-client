@@ -44,7 +44,7 @@ const Login = () => {
                 const loggedinUser = result.user;
                 console.log(loggedinUser)
                 const saveStudent = { name: loggedinUser.displayName, email: loggedinUser.email }
-                fetch('http://localhost:5000/users', {
+                fetch('https://b712-summer-camp-server-side-chi.vercel.app/users', {
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json'

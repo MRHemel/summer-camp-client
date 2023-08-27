@@ -2,9 +2,11 @@ import { useContext, useState } from "react";
 import { AuthContext } from "../providers/AuthProviders";
 import { useLocation, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
+import useAdmin from "../hooks/useAdmin";
 
 const ClassCard = ({ course }) => {
     const { name, instructor, seats, price, image, _id } = course
+    const [isAdmin] = useAdmin()
     const { user } = useContext(AuthContext)
     const [disabled, setDisabled] = useState(false)
     const navigate = useNavigate()
@@ -28,7 +30,7 @@ const ClassCard = ({ course }) => {
 
         } else {
             const courseItem = { courseId: _id, name, instructor, price, image, email: user.email }
-            fetch('http://localhost:5000/carts', {
+            fetch('https://b712-summer-camp-server-side-chi.vercel.app/carts', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json'
@@ -62,7 +64,9 @@ const ClassCard = ({ course }) => {
                 <p>Seats:{seats}</p>
                 <p>Price:${price}</p>
                 <div className="card-actions">
-                    <button disabled={seats === 0 || disabled} className="btn btn-primary" onClick={() => handleSelect(course)}>Select</button>
+                    {
+                        isAdmin ? <button disabled={true} className="btn btn-primary" >Select</button> : <button disabled={seats === 0 || disabled} className="btn btn-primary" onClick={() => handleSelect(course)}>Select</button>
+                    }
                 </div>
             </div>
         </div>

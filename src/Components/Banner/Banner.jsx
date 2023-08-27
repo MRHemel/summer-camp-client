@@ -11,7 +11,7 @@ const Banner = () => {
             <Parallax blur={5} bgImage={cover} bgImageAlt="" strength={600}>
 
                 <Slide>
-                    <h1 className='uppercase text-center text-5xl font-extrabold bg-[#A5D7E8] bg-opacity-50 text-white mt-28'>Get your admission today</h1>
+                    <h1 className='uppercase text-center text-5xl font-extrabold bg-[#A5D7E8] bg-opacity-0 text-white mt-28'>Get your admission today</h1>
                 </Slide>
 
                 <div className='lg:flex lg:justify-evenly mt-20 mb-16'>
@@ -40,10 +40,10 @@ const Banner = () => {
                     </div>
                 </div>
                 <Slide direction='right'>
-                    <h1 className='uppercase text-center text-5xl font-extrabold text-[#5a1177] bg-[#A5D7E8] bg-opacity-50 mt-28'>We are offering you all language</h1>
+                    <h1 className='uppercase text-center text-5xl font-extrabold text-[#f5eff7] bg-[#A5D7E8] bg-opacity-0 mt-28'>We are offering you all language</h1>
                 </Slide>
                 <Fade delay={1e3} cascade damping={1e-1}>
-                    <p className='text-center text-[#7b0d77] bg-[#A5D7E8] text-3xl font-bold mt-4 mb-20'>You choose yours</p>
+                    <p className='text-center text-[#f7f2f6] bg-[#A5D7E8] text-3xl font-bold mt-4 mb-20 bg-opacity-0'>You choose yours</p>
                 </Fade>
             </Parallax>
         </div>
